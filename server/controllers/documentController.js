@@ -23,6 +23,26 @@ const uploadDocument = async (req, res) => {
   }
 };
 
+const getDocuments = async (req, res) => {
+
+  try {
+
+    const documents =
+      await Document.find({
+        userId: req.user.id
+      });
+
+    res.json(documents);
+
+  } catch (error) {
+
+    res.status(500).json({
+      message: error.message
+    });
+
+  }
+};
+
 module.exports = {
-  uploadDocument
+  uploadDocument,getDocuments
 };
