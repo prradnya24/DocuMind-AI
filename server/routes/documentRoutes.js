@@ -9,7 +9,11 @@ const upload = require("../config/multer");
 const {
   uploadDocument
 } = require("../controllers/documentController");
-
+router.get(
+  "/",
+  protect,
+  getDocuments
+);
 router.post(
   "/upload",
   protect,
