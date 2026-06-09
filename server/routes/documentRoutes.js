@@ -6,8 +6,11 @@ const protect = require("../middleware/authMiddleware");
 
 const upload = require("../config/multer");
 
+
+
 const {
-  uploadDocument
+  uploadDocument,
+  getDocuments
 } = require("../controllers/documentController");
 router.get(
   "/",

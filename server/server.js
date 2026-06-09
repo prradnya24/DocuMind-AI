@@ -7,10 +7,7 @@ const protect = require("./middleware/authMiddleware");
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
 const documentRoutes = require("./routes/documentRoutes");
-const {
-  uploadDocument,
-  getDocuments
-} = require("../controllers/documentController");
+
 const app = express();
 
 connectDB();
